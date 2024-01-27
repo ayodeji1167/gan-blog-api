@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "videos",
+        "images"
+      ]
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "readTime": {
+      "type": "string",
+      "required": true
+    },
+    "likeCount": {
+      "type": "integer",
+      "default": 0,
+      "unique": false,
+      "required": false
+    },
+    "content": {
+      "type": "richtext",
+      "required": false
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}
