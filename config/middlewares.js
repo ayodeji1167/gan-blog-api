@@ -1,13 +1,6 @@
 module.exports = [
   "strapi::logger",
   "strapi::errors",
-  "strapi::cors",
-  "strapi::poweredBy",
-  "strapi::query",
-  "strapi::body",
-  "strapi::session",
-  "strapi::favicon",
-  "strapi::public",
   {
     name: "strapi::security",
     config: {
@@ -19,14 +12,14 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "dl.airtable.com",
+            "market-assets.strapi.io",
             "res.cloudinary.com",
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
-            "dl.airtable.com",
+            "market-assets.strapi.io",
             "res.cloudinary.com",
           ],
           upgradeInsecureRequests: null,
@@ -34,4 +27,11 @@ module.exports = [
       },
     },
   },
+  "strapi::cors",
+  "strapi::poweredBy",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
